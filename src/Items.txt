@@ -1,0 +1,43 @@
+# Nom;Type;Prix;Energie;Mana;Valeur;Forme
+
+# --- CONSOMMABLES ---
+Potion;MISC;10;0;0;20;0,0
+Grande Potion;MISC;30;0;0;50;0,0|0,1
+Fromage;MISC;5;0;0;5;0,0
+Pomme Dorée;MISC;50;0;0;100;0,0
+
+# --- ARMES LÉGÈRES (Rapides / Peu d'énergie) ---
+Dague;MELEE_WEAPON;25;1;0;6;0,0|0,1
+Kunaï;MELEE_WEAPON;15;0;0;7;0,0
+
+
+# --- ARMES STANDARDS ---
+Épée;MELEE_WEAPON;15;1;0;10;0,0|1,0
+Glaive;MELEE_WEAPON;45;1;0;12;0,0|1,0|2,0
+Rapière;MELEE_WEAPON;55;1;0;12;0,0|1,0|2,0
+
+# --- ARMES LOURDES (Formes complexes / Coûtent cher en énergie) ---
+Hache de Guerre;MELEE_WEAPON;60;2;0;20;0,0|1,0|1,1
+Grande Masse;MELEE_WEAPON;70;3;0;20;0,0|0,1|1,0|1,1
+Faux;MELEE_WEAPON;80;2;0;20;0,0|1,0|2,0|2,1
+
+# --- BOUCLIERS (Défense active) ---
+Bouclier;SHIELD;30;2;0;5;0,0
+Grand Pavois;SHIELD;65;1;0;10;0,0|1,0|0,1|1,1
+Targe;SHIELD;20;1;0;7;0,0
+
+# --- ARMURES (Défense passive) ---
+Pantalon;SHIELD;40;1;0;10;0,0|1,0
+Casque de Fer;SHIELD;35;1;0;5;0,0|1,0
+Plastron;SHIELD;90;1;0;20;0,0|0,1|1,0|1,1|2,0|2,1
+Bottes;SHIELD;25;1;0;4;0,0|1,0
+
+# --- PIERRES DE MANA (Mana = 0 car c'est un coût, le gain est dans Valeur) ---
+Petite Pierre;MANA_SOURCE;15;0;0;1;0,0
+Grande Pierre;MANA_SOURCE;40;0;0;3;0,0|0,1
+Conduit Mana;MANA_SOURCE;60;0;0;2;0,0|1,0
+
+# --- ARMES MAGIQUES (Mana = Coût pour utiliser) ---
+Baguette Magique;MAGIC_WEAPON;25;0;1;8;0,0|1,0
+Sceptre Feu;MAGIC_WEAPON;50;0;3;14;0,0|1,0|2,0
+Livre Sorts;MAGIC_WEAPON;35;0;2;12;0,0|0,1

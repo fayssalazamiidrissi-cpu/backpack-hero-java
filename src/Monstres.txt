@@ -1,0 +1,7 @@
+#Format : Nom;PV;Attaque;XP
+Ratwolf;35;8;10
+Small_Ratwolf;40;4;5
+
+Bee;30;10;6
+Slime;40;6;8
+Crab;40;5;15

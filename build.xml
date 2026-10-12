@@ -1,0 +1,52 @@
+<project name="BackpackHero" default="jar" basedir=".">
+
+    <property name="src.dir" value="src"/>
+    <property name="build.dir" value="classes"/>
+    <property name="lib.dir" value="lib"/>
+    <property name="doc.dir" value="docs/doc"/>
+    <property name="jar.file" value="BackpackHero.jar"/>
+    
+    <property name="main.class" value="fr.uge.backpack.controller.GameController"/>
+
+    <path id="classpath">
+        <fileset dir="${lib.dir}" includes="**/*.jar"/>
+    </path>
+
+    <target name="clean">
+        <delete dir="${build.dir}"/>
+        <delete dir="${doc.dir}"/>
+        <delete file="${jar.file}"/>
+        <echo message="Projet nettoyé."/>
+    </target>
+
+    <target name="compile">
+        <mkdir dir="${build.dir}"/>
+        <javac srcdir="${src.dir}" destdir="${build.dir}" includeantruntime="false" classpathref="classpath" encoding="UTF-8">
+        </javac>
+        
+        <copy todir="${build.dir}">
+            <fileset dir="${src.dir}">
+                <exclude name="**/*.java"/>
+            </fileset>
+        </copy>
+        <echo message="Compilation terminée."/>
+    </target>
+
+    <target name="jar" depends="compile">
+        <jar destfile="${jar.file}" basedir="${build.dir}">
+            <manifest>
+                <attribute name="Main-Class" value="${main.class}"/>
+            </manifest>
+            <zipgroupfileset dir="${lib.dir}" includes="*.jar"/>
+        </jar>
+        <echo message="JAR créé : ${jar.file}"/>
+    </target>
+
+    <target name="javadoc">
+        <mkdir dir="${doc.dir}"/>
+        <javadoc sourcepath="${src.dir}" destdir="${doc.dir}" classpathref="classpath" encoding="UTF-8" access="private">
+        </javadoc>
+        <echo message="Javadoc générée dans ${doc.dir}"/>
+    </target>
+
+</project>
